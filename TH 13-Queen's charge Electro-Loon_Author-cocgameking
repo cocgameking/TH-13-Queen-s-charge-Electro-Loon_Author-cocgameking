@@ -1,0 +1,111 @@
+NOTE  |TH 13:Queen's charge Electro-Loon
+NOTE  |Author:cocgameking. 22/05/2024
+NOTE  |version 1.0
+NOTE  |6 Electrodragons, 10 Balloons,5 Healers, 
+NOTE  |Spells:4 Rage, 3 Freeze
+NOTE  |CC:9 Balloons and 1 Rage or Haste
+NOTE  |Siege: Wall Wrecker 
+NOTE  |Script work on "EXTERNAL EDGES"
+      |                                                                                                                       |
+      |-------------------------------------------------     (ElectroLoon By cocgameking)     -----------------------------------------------------|
+
+
+      |                                                                                                                       |
+      |_TROOPNAME_|__FLEXIBLE_|____TH06___|____TH07___|____TH08___|____TH09___|____TH10___|____TH11___|____TH12___|____TH13___|
+TRAIN |EDrag      |0          |0          |0          |0          |0          |0          |0          |0          |6          |
+TRAIN |Ball       |0          |0          |0          |0          |0          |0          |0          |0          |10         |
+TRAIN |Heal       |0          |0          |0          |0          |0          |0          |0          |0          |5          |
+TRAIN |WallW      |0          |0          |0          |0          |0          |0          |0          |0          |3
+
+     |                                                                                                                       |
+TRAIN |RSpell     |0          |0          |0          |0          |0          |0          |4          |4          |4          |
+TRAIN |FSpell     |0          |0          |0          |0          |0          |0          |3          |3          |3          |
+      |                                                                                                                       |
+      |_TROOPNAME_|___________|____TH06___|____TH07___|____TH08___|____TH09___|____TH10___|____TH11___|____TH12___|____TH13___|
+TRAIN |King       |0          |0          |0          |0          |0          |0          |1          |1          |1          |
+TRAIN |Queen      |0          |0          |0          |0          |0          |0          |1          |1          |1          |
+TRAIN |Warden     |0          |0          |0          |0          |0          |0          |1          |1          |1          |
+TRAIN |Champion   |0          |0          |0          |0          |0          |0          |0          |0          |1          |
+      |                                                                                                                       |
+      |___________|___________|____TH06___|____TH07___|____TH08___|____TH09___|____TH10___|____TH11___|____TH12___|____TH13___|
+REDLN |0          |0          |0          |0          |0          |0          |0          |4          |4          |4          |
+DRPLN |0          |0          |0          |0          |0          |0          |0          |0          |0          |0          |
+      |                                                                                                                       |
+      |                                                                                                                       |
+      |EXTR. GOLD |EXTR.ELIXIR|EXTR. DARK |DEPO. GOLD |DEPO.ELIXIR|DEPO. DARK |TOWNHALL   |FORCED SIDE|___________|___________|
+SIDE  |0          |0          |0          |0          |0          |3          |20         |           |           |           |
+      |EAGLE      |INFERNO    |XBOW       |WIZTOWER   |MORTAR     |AIRDEFENSE |GEMBOX     |GEMBOX     |           |           |
+SIDEB |9          |5          |0          |0          |0          |0          |0          |           |           |           |
+      |                                                                                                                       |
+      |___________|___________|____TH06___|____TH07___|____TH08___|____TH09___|____TH10___|____TH11_____________________________|________________________TH12_________|_____________________TH13____________|
+CCREQ |           |           |           |           |           |           |           |loons Rage or Haste Sieges  thank you|loons Rage or Haste Sieges  thank you|loons Rage or Haste Sieges  thank you|
+
+
+      |___________|___________|____TH06___|____TH07___|____TH08___|____TH09___|____TH10___|____TH11___|____TH12___|____TH13___|____TH14___|____TH15___|	  
+WMODE |0	      |0          |0          |0          |0          |0          |1          |1          |1          |1          |1  	      |1          |
+
+VECTOR ___________|SIDE_______|DROP_POINTS|ADDTILES___|VERSUS_____|RANDOMX_PX_|RANDOMY_PX_|BUILDING___|___________|___________|
+MAKE  |Q          |FRONT-LEFT |10         |0          |EXT-INT    |10         |0          |           |           |           |
+MAKE  |R          |FRONT-RIGHT|10         |0          |INT-EXT    |10         |0          |           |           |           |
+MAKE  |S          |FRONT-LEFT |10         |-8         |INT-EXT    |3          |4          |           |           |           |
+MAKE  |T          |FRONT-RIGHT|10         |-7         |INT-EXT    |2          |5          |           |           |           |
+MAKE  |U          |FRONT-LEFT |10         |-17        |INT-EXT    |2          |2          |           |           |           |
+MAKE  |V          |FRONT-RIGHT|10         |-15        |INT-EXT    |1          |3          |           |           |           |
+MAKE  |X          |FRONT-RIGHT|10         |-23        |INT-EXT    |13         |8          |           |           |           |
+MAKE  |C          |LEFT-FRONT |10         |0          |EXT-INT    |0          |0          |           |           |           |
+MAKE  |D          |RIGHT-FRONT|10         |0          |EXT-INT    |0          |0          |           |           |           |
+MAKE  |W          |LEFT-FRONT |1          |1          |IGNORE     |0          |0          |INFERNO    |           |           |
+MAKE  |B          |RIGHT-FRONT|1          |1          |IGNORE     |0          |0          |EAGLE      |           |           |
+MAKE  |K          |FRONT-RIGHT|1          |1          |IGNORE     |0          |0          |INFERNO    |           |           |
+MAKE  |P          |FRONT-LEFT |1          |1          |IGNORE     |0          |0          |TOWNHALL   |           |           |
+MAKE  |A          |FRONT-RIGHT|1          |1          |IGNORE     |0          |0          |TOWNHALL   |           |           |
+      |                                                                                                                       |
+      |VECTOR_____|INDEX______|QTY_X_VECT_|TROOPNAME__|DELAY_DROP_|DELAYCHANGE|SLEEPAFTER_|___________|___________|___________|
+DROP  |Q          |2          |1          |Ball       |0          |27-50      |50-70      |           |           |           |
+DROP  |R          |9          |1          |Ball       |0          |27-50      |1050-1090  |           |           |           |
+DROP  |Q          |2          |1          |EDrag      |55-70      |27-50      |15-20      |           |           |           |
+DROP  |R          |9          |1          |EDrag      |55-70      |27-50      |150-250    |           |           |           |
+WAIT  |8500-9500  |           |           |           |           |           |           |           |           |           |
+DROP  |Q          |5,8        |2          |EDrag      |70-95      |60-90      |15-20      |           |           |           |
+DROP  |R          |1,3,5      |3          |EDrag      |60-82      |37-50      |500-700    |           |           |           |
+DROP  |Q          |10         |1          |Castle     |0          |50-70      |150-170    |           |           |           |
+DROP  |Q          |10         |1          |WallW      |0          |50-70      |150-170    |           |           |           |
+DROP  |Q          |10         |1          |StoneS     |0          |50-70      |350-470    |           |           |           |
+DROP  |Q          |10         |1          |BattleB    |0          |50-70      |350-470    |           |           |           |
+DROP  |Q          |4,5,7-10   |6          |Ball       |50-70      |27-50      |15-20      |           |           |           |
+DROP  |R          |1-6        |6          |Ball       |50-70      |27-50      |15-20      |           |           |           |
+DROP  |Q          |10         |1          |Warden     |50-70      |0          |500-650    |           |           |           |
+DROP  |S          |5          |1          |RSpell     |0          |0          |178-200    |           |           |           |
+DROP  |S          |1          |1          |RSpell     |0          |0          |180-200    |           |           |           |
+DROP  |T          |4          |1          |RSpell     |0          |0          |830-890    |           |           |           |
+
+DROP  |Q          |10         |1          |SiegeB     |0          |50-70      |350-470    |           |           |           |
+DROP  |Q          |10         |1          |Queen      |0          |0          |900-950    |           |           |           |
+DROP  |Q          |10         |10         |Heal       |50-70      |27-50      |15-20      |           |           |           |
+DROP  |Q          |10         |1          |Champion   |0          |0          |900-950    |           |           |           |
+DROP  |B          |1          |1          |FSpell     |0          |0          |100-150    |           |           |           |
+WAIT  |3000-3400  |           |           |           |           |           |           |           |           |           |
+DROP ﻿ |V          |2          |1          |HaSpell    |0          |0          |150-170    |           |           |           |
+DROP  |B       ﻿   |1          |1          |FSpell     |0          |0          |500-550    |           |           |           |
+DROP  |B          |2          |1          |HaSpell    |0          |0          |190-230    |           |           |           |
+DROP  |U          |3          |1          |RSpell     |0          |0          |150-170    |           |           |           |
+DROP  |V          |2          |1          |RSpell     |0          |0          |100-150    |           |           |           |
+WAIT  |3000-3300  |           |           |           |           |           |           |           |           |           |
+DROP  |X       ﻿   |2          |1          |RSpell     |0          |0          |500-550    |           |           |           |
+DROP  |B          |1          |1          |FSpell     |0          |0          |200-250    |           |           |           |
+WAIT  |3300-3500  |           |           |           |           |           |           |           |           |           |
+DROP  |Q          |10         |1          |StoneS     |0          |50-70      |150-170    |           |           |           |
+WAIT  |3000-3400  |           |           |           |           |           |           |           |           |           |
+DROP  |B          |1          |1          |FSpell     |0          |0          |200-250    |           |           |           |
+DROP  |Q          |10         |1          |Warden     |50-100     |           |150-200    |           |           |           |
+WAIT  |3000-3400  |           |           |           |           |           |           |           |           |           |
+DROP  |K          |1          |1          |FSpell     |0          |0          |200-250    |           |           |           |
+WAIT  |3000-3400  |           |           |           |           |           |           |           |           |           |
+DROP  |A          |1          |1          |FSpell     |0          |0          |200-250    |           |           |           |
+DROP  |C-D        |7-10       |1          |REMAIN     |50-70      |100        |50-100     |           |           |           |
+WAIT  |500-700    |           |           |           |           |           |           |           |           |           |
+DROP  |Q-R        |2,4,6,8,10 |5          |REMAIN     |50-70      |100        |50-100     |           |           |﻿﻿﻿           |
+      |                                                                                                                       |
+RECALC|           |           |           |           |           |           |           |           |
+
+      |----------------------------------------------------ElectroLoon End----------------------------------------------------|
